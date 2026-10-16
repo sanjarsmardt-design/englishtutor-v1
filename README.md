@@ -2,14 +2,18 @@
 
 Responsive static website for an English grammar and speaking tutor in Chilonzor, Tashkent.
 
+## Important: images are embedded in the HTML
+Both Tashkent photographs are embedded directly in `index.html`. This avoids broken image paths if you accidentally upload the HTML without the `assets` folder. The original image files are also included in `assets/`.
+
 ## Preview locally
-Extract the ZIP, then open `index.html` in a browser. Keep the `assets` folder next to `index.html`; it contains both photographs used on the site.
+Extract the ZIP and open `index.html` in a browser.
 
 ## Publish with GitHub + Vercel
-1. Create a GitHub repository, e.g. `fun-english-for-kids`.
-2. Upload `index.html`, `styles.css`, `script.js`, and the complete `assets` folder. Keep the same folder structure.
-3. In Vercel, select **Add New → Project**, import the repository, and deploy as a static site. No build command is needed; use `.` as the output directory if prompted.
-4. Open the public `*.vercel.app` URL Vercel provides.
-5. Later, add your custom domain in Vercel under **Project → Settings → Domains** and follow the DNS instructions.
+1. Extract the ZIP.
+2. Create a GitHub repository, e.g. `fun-english-for-kids`.
+3. Upload `index.html`, `styles.css`, `script.js`, `README.md`, and the `assets` folder. Keep the folder structure intact (the embedded images will still work even if the assets folder is missed).
+4. If a previous version is deployed, make sure the updated `index.html` is committed to GitHub. In Vercel, open the project and choose **Deployments → Redeploy** (or push a new commit).
+5. Vercel deploys this static site without a build command. Open the public `*.vercel.app` URL.
+6. Later, connect your custom domain in **Project → Settings → Domains** and follow Vercel's DNS instructions.
 
-The photos are local files (not remote image URLs), and the page uses real `<img>` elements to display them. Google Fonts may load from the internet; the page remains usable if they do not.
+Google Fonts may load from the internet; images do not depend on external image services.
